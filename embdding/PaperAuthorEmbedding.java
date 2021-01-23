@@ -18,7 +18,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class PaperAuthorEmbedding{
-	static String linuxpath = "";//"//home//ubuntu//Desktop//recommendation_system//java//program//xcjprogram//";
+	static String linuxpath = "";//"//home//ubuntu//...
 
 	public static void  main(String args[]){
 		int embeddingLength=25;
