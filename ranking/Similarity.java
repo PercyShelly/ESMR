@@ -25,7 +25,7 @@ public class Similarity {
 				for(int i=1;i<str.length;i++){
 					vector[i-1]=Double.valueOf(str[i].toString());
 				}
-				map.put(str[0],vector);//将id作为key,嵌入作为value放入map中
+				map.put(str[0],vector);//陆芦id脳梅脦陋key,脟露脠毛脳梅脦陋value路脜脠毛map脰脨
 			}
 			br.close();
 			System.out.println(map.keySet().size());
@@ -123,7 +123,6 @@ public class Similarity {
         return cosine;
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Similarity simi=new Similarity();
 		String p1file = "./author(NECoRank-T)1.txt";
 		String p2file = "./paper(NECoRank-T)1.txt";
