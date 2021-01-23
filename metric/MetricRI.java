@@ -348,12 +348,11 @@ public class MetricRI {
 		}
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//Similarity simi=new Similarity();
 		int n=20;
 		String k="20";
-//		String paperfile="D:/hjn/½á¹û/ÏòÁ¿/paper("+k+").txt";
-//		String authorfile="D:/hjn/½á¹û/ÏòÁ¿/author("+k+").txt";
+//		String paperfile="D:/hjn/ç»“æœ/å‘é‡/paper("+k+").txt";
+//		String authorfile="D:/hjn/ç»“æœ/å‘é‡/author("+k+").txt";
 //		String paperfile="D:/hjn/DASFAA/paperEmbedding-64.txt";
 //		String authorfile="D:/hjn/DASFAA/authorEmbedding-64.txt";
 //		Map<String,double[]> map=Similarity.readData(paperfile,authorfile);
@@ -361,12 +360,12 @@ public class MetricRI {
 //		//String aafile="D:/hjn/reprocessed/weused/a-a(remaindouble).txt";
 //		String aafile="D:/hjn/reprocessed/a-a(remain).txt";
 //		String apfile="D:/hjn/reprocessed/weused/a-p(remain).txt";
-		/**AMinerÊı¾İ¼¯***/
-//		String ppOut="D:/hjn/½á¹û/ÏàËÆ¶È/p-p-out("+k+").txt";
-//		String aaOut="D:/hjn/½á¹û/ÏàËÆ¶È/a-a-out("+k+").txt";
-//		String apOut="D:/hjn/½á¹û/ÏàËÆ¶È/a-a-out("+k+").txt";
+		/**AMineræ•°æ®é›†***/
+//		String ppOut="D:/hjn/ç»“æœ/ç›¸ä¼¼åº¦/p-p-out("+k+").txt";
+//		String aaOut="D:/hjn/ç»“æœ/ç›¸ä¼¼åº¦/a-a-out("+k+").txt";
+//		String apOut="D:/hjn/ç»“æœ/ç›¸ä¼¼åº¦/a-a-out("+k+").txt";
 		/*****************************************************/
-		/**aanÊı¾İ¼¯***/
+		/**aanæ•°æ®é›†***/
 		String ppOut="./data/Result/p-p-out("+k+").txt";
 		String aaOut="./data/Result/a-a-out("+k+").txt";
 		String apOut="./data/Result/a-p-out("+k+").txt";
@@ -375,10 +374,10 @@ public class MetricRI {
 //		Similarity.cosine(map,apfile,apOut);
 //
 		CoRank corank=new CoRank();
-		/**AMinerÊı¾İ¼¯***/
+		/**AMineræ•°æ®é›†***/
 //		corank.initializeVertexWeight("D:/hjn/reprocessed/weused/paperWeight1.txt", "p");//D:/hjn/reprocessed/weused/authorWeight1.txt
 //		corank.initializeVertexWeight("D:/hjn/reprocessed/weused/authorWeight1.txt", "a");
-		/**aanÊı¾İ¼¯***/
+		/**aanæ•°æ®é›†***/
 		corank.initializeVertexWeight("./data/paperWeight.txt", "p");//D:/hjn/reprocessed/weused/authorWeight1.txt
 		corank.initializeVertexWeight("./data/authorWeight.txt", "a");
 		
@@ -391,17 +390,17 @@ public class MetricRI {
 		corank.iterateRank(20,0.3,0.3,0.05,0.9);
 //		-------------------
 		
-		/**AMinerÊı¾İ¼¯***/
-//		String pfile="D:/hjn/½á¹û/RankÖµ/papervalue("+k+").csv";//D:/hjn/¶Ô±ÈÊµÑé/LINE+CoRank/paperranked.txt
-//		String afile="D:/hjn/½á¹û/RankÖµ/authorvalue("+k+").csv";//D:/hjn/¶Ô±ÈÊµÑé/LINE+CoRank/authorranked.txt
-		/**aanÊı¾İ¼¯***/
+		/**AMineræ•°æ®é›†***/
+//		String pfile="D:/hjn/ç»“æœ/Rankå€¼/papervalue("+k+").csv";//D:/hjn/å¯¹æ¯”å®éªŒ/LINE+CoRank/paperranked.txt
+//		String afile="D:/hjn/ç»“æœ/Rankå€¼/authorvalue("+k+").csv";//D:/hjn/å¯¹æ¯”å®éªŒ/LINE+CoRank/authorranked.txt
+		/**aanæ•°æ®é›†***/
 		String pfile="./data/Result/papervalue("+k+").csv";
 		String afile="./data/Result/authorvalue("+k+").csv";
 		corank.saveRankedResults(pfile, afile);
-//		String pfile="D:/hjn/¶Ô±ÈÊµÑé/ourWeight+CoRank/paperranked.txt";
-//		String afile="D:/hjn/¶Ô±ÈÊµÑé/ourWeight+CoRank/authorranked.txt";
+//		String pfile="D:/hjn/å¯¹æ¯”å®éªŒ/ourWeight+CoRank/paperranked.txt";
+//		String afile="D:/hjn/å¯¹æ¯”å®éªŒ/ourWeight+CoRank/authorranked.txt";
 		MetricRI test=new MetricRI();
-		/**AMinerÊı¾İ¼¯***/
+		/**AMineræ•°æ®é›†***/
 //		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
 //		test.initializePYF("D:/hjn/reprocessed/paper-year-field.txt");
 //		test.initializePGT("D:/hjn/reprocessed/paperGT(pcyf).txt");
@@ -413,7 +412,7 @@ public class MetricRI {
 //		test.initializeAL(afile);//our method
 //		test.calculateRI_A(n);
 //		System.out.println("author Finished!");
-		/**aanÊı¾İ¼¯***/
+		/**aanæ•°æ®é›†***/
 		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
 		test.initializePYF("./data/paperlist.txt");
 		test.initializePGT("./data/p2009cit.txt");
@@ -426,46 +425,46 @@ public class MetricRI {
 		test.calculateRI_A(n);
 		System.out.println("author Finished!");
 		
-//		/**********¶Ô±ÈÊµÑéAMiner****************/
+//		/**********å¯¹æ¯”å®éªŒAMiner****************/
 //		MetricRI test=new MetricRI();
 //		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
 //		test.initializePYF("D:/hjn/reprocessed/paper-year-field.txt");
 //		test.initializePGT("D:/hjn/reprocessed/paperGT(pcyf).txt");
-//		test.initializePL("D:/hjn/¶Ô±ÈÊµÑé/²âÊÔPageRank/paperranked.txt");//pageRank
-////		test.initializePL("D:/hjn/¶Ô±ÈÊµÑé/FutureRank/paperranked.txt");//FutureRank
-////		test.initializePL("D:/hjn/¶Ô±ÈÊµÑé/MRCoRank/paperranked.txt");//MRCoRank 
-//		test.initializePL("D:/hjn/¶Ô±ÈÊµÑé/ourWeight+CoRank/paperranked.txt");
+//		test.initializePL("D:/hjn/å¯¹æ¯”å®éªŒ/æµ‹è¯•PageRank/paperranked.txt");//pageRank
+////		test.initializePL("D:/hjn/å¯¹æ¯”å®éªŒ/FutureRank/paperranked.txt");//FutureRank
+////		test.initializePL("D:/hjn/å¯¹æ¯”å®éªŒ/MRCoRank/paperranked.txt");//MRCoRank 
+//		test.initializePL("D:/hjn/å¯¹æ¯”å®éªŒ/ourWeight+CoRank/paperranked.txt");
 ////		test.initializePL("D:/hjn/Result/Ourmethod/PaperRank(pagerank_withoutembed).txt");//hypernetwork
 //		test.calculateRI_P(n);
 //		System.out.println("paper Finished!");
 ////		test.initializeAYF("D:/hjn/reprocessed/author-year-field.txt");
 ////		test.initializeAGT("D:/hjn/reprocessed/authorGT(acyf).txt");
 //////		test.initializeAL("D:/hjn/DASFAA/authorrankvalue.txt");//pageRank
-////		test.initializeAL("D:/hjn/¶Ô±ÈÊµÑé/FutureRank/authorranked.txt");//FutureRank
-//////		test.initializeAL("D:/hjn/¶Ô±ÈÊµÑé/MRCoRank/authorranked.txt");//MRCoRank
-//////		test.initializeAL("D:/hjn/¶Ô±ÈÊµÑé/ourWeight+CoRank/authorranked.txt");
-//////		test.initializeAL("D:/hjn/¶Ô±ÈÊµÑé/PageRank/authorrankedH.txt");//hypernetwork
+////		test.initializeAL("D:/hjn/å¯¹æ¯”å®éªŒ/FutureRank/authorranked.txt");//FutureRank
+//////		test.initializeAL("D:/hjn/å¯¹æ¯”å®éªŒ/MRCoRank/authorranked.txt");//MRCoRank
+//////		test.initializeAL("D:/hjn/å¯¹æ¯”å®éªŒ/ourWeight+CoRank/authorranked.txt");
+//////		test.initializeAL("D:/hjn/å¯¹æ¯”å®éªŒ/PageRank/authorrankedH.txt");//hypernetwork
 ////		test.calculateRI_A(n);
 ////		System.out.println("author Finished!");
-		/**********¶Ô±ÈÊµÑéAAN****************/
+		/**********å¯¹æ¯”å®éªŒAAN****************/
 //		MetricRI test=new MetricRI();
 //		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
 //		test.initializePYF("D:/hjn/aan/processdata/paperlist.csv");
 //		test.initializePGT("D:/hjn/aan/processdata/papercitation(GT).csv");
-////		test.initializePL("D:/hjn/aan/¶Ô±ÈÊµÑé/PageRank/paperranked.txt");//pageRank
-////		test.initializePL("D:/hjn/aan/¶Ô±ÈÊµÑé/FutureRank/paperranked.txt");//FutureRank
-////		test.initializePL("D:/hjn/¶Ô±ÈÊµÑé/MRCoRank/paperranked.txt");//MRCoRank 
-////		test.initializePL("D:/hjn/¶Ô±ÈÊµÑé/ourWeight+CoRank/paperranked.txt");
-//		test.initializePL("D:/hjn/aan/¶Ô±ÈÊµÑé/hyperNetwork/paperranked.txt");//hypernetwork
+////		test.initializePL("D:/hjn/aan/å¯¹æ¯”å®éªŒ/PageRank/paperranked.txt");//pageRank
+////		test.initializePL("D:/hjn/aan/å¯¹æ¯”å®éªŒ/FutureRank/paperranked.txt");//FutureRank
+////		test.initializePL("D:/hjn/å¯¹æ¯”å®éªŒ/MRCoRank/paperranked.txt");//MRCoRank 
+////		test.initializePL("D:/hjn/å¯¹æ¯”å®éªŒ/ourWeight+CoRank/paperranked.txt");
+//		test.initializePL("D:/hjn/aan/å¯¹æ¯”å®éªŒ/hyperNetwork/paperranked.txt");//hypernetwork
 //		test.calculateRI_P(n);
 //		System.out.println("paper Finished!");
 //		test.initializeAYF("D:/hjn/aan/processdata/authorlist.csv");
 //		test.initializeAGT("D:/hjn/aan/processdata/authorcitation(GT).csv");
-////		test.initializeAL("D:/hjn/aan/¶Ô±ÈÊµÑé/PageRank/authorranked.txt");//pageRank
-////		test.initializeAL("D:/hjn/aan/¶Ô±ÈÊµÑé/FutureRank/authorranked.txt");//FutureRank
-////		test.initializeAL("D:/hjn/¶Ô±ÈÊµÑé/MRCoRank/authorranked.txt");//MRCoRank
-////		test.initializeAL("D:/hjn/¶Ô±ÈÊµÑé/ourWeight+CoRank/authorranked.txt");
-//		test.initializeAL("D:/hjn/aan/¶Ô±ÈÊµÑé/hyperNetwork/authorranked.txt");//hypernetwork
+////		test.initializeAL("D:/hjn/aan/å¯¹æ¯”å®éªŒ/PageRank/authorranked.txt");//pageRank
+////		test.initializeAL("D:/hjn/aan/å¯¹æ¯”å®éªŒ/FutureRank/authorranked.txt");//FutureRank
+////		test.initializeAL("D:/hjn/å¯¹æ¯”å®éªŒ/MRCoRank/authorranked.txt");//MRCoRank
+////		test.initializeAL("D:/hjn/å¯¹æ¯”å®éªŒ/ourWeight+CoRank/authorranked.txt");
+//		test.initializeAL("D:/hjn/aan/å¯¹æ¯”å®éªŒ/hyperNetwork/authorranked.txt");//hypernetwork
 //		test.calculateRI_A(n);
 //		System.out.println("author Finished!");
 	}
