@@ -21,22 +21,7 @@ def get_wt(input_path):
             paper_id.append(line[0])
             documents.append(line[1])
     f.close()
-    # print(line_tw)
-    '''
-    for document in line_tw:
-        words = []
-        # print('d:', document)
-        for word in document.split():
-            # print(word)
-            if len(word) <= 1:          # title 单词
-                words.append(word.lower())
-            else:
-                for wor in word.split(','):     # 摘要单词
-                    words.append(wor.lower())
-                    print('w:', wor)
-        texts_lower.append(words)
-        # print(texts_lower[0])
-    '''
+   
     # texts_tokennized = []  # 单词最小化及分离标点
     print('单词最小化及分离标点')
     for index, document in enumerate(documents):
