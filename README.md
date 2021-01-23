@@ -11,11 +11,11 @@ In this paper, we propose a novel model called ESMR, which adds the learned Embe
 ---
 We used a total of two datasets, ACL Anthology Network (ANN) and Academic Social Network of AMiner Dataset.  And there are two versions of Aminer Dataset.
 
-You can download the dataset from these place: https://clair.eecs.umich.edu/aan/index.ph
+You can download the dataset from these place: https://clair.eecs.umich.edu/aan/index.ph  (ANN)
 
-​                                                                              https://www.aminer.cn/aminernetwork
+​                                                                              https://www.aminer.cn/aminernetwork (Aminer-2014)
 
-​                                                                              https://originalstatic.aminer.cn/misc/dblp.v12.7z
+​                                                                              https://originalstatic.aminer.cn/misc/dblp.v12.7z (Aminer-2020)
 
 Enviorment Requirement for data processing :
 
