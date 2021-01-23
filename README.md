@@ -13,9 +13,9 @@ We used a total of two datasets, ACL Anthology Network (AAN) and Academic Social
 
 You can download the dataset from these place: https://clair.eecs.umich.edu/aan  (AAN)
 
-​                                                                              https://www.aminer.cn/aminernetwork (Aminer-2014)
+​                                              https://www.aminer.cn/aminernetwork (Aminer-2014)
 
-​                                                                              https://originalstatic.aminer.cn/misc/dblp.v12.7z (Aminer-2020)
+​                                              https://originalstatic.aminer.cn/misc/dblp.v12.7z (Aminer-2020)
 
 Enviorment Requirement for data processing :
 
