@@ -35,8 +35,6 @@ At this time, a graphical interface will pop up, and several pieces of data will
 
 Remove the citation relationship of papers published after 2015 (the number of citations in the future will only consider the articles to be ranked, that is, those published before 2015)
 
-Remove the cited information after 2015
-
 Remove papers that have no references or are not cited by other articles
 
 Remove papers without a title or abstract
