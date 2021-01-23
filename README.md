@@ -64,7 +64,7 @@ If you want to conduct comparative experiments in your own way, you can refer to
 
 ## Step 3: train and test
 
-**(1) get all network embbeding**
+**(1)get embedding of all networks**
 
 ```
 PaperAuthorEmbedding.java
@@ -78,7 +78,7 @@ You can directly set the embedded dimension
 Similarity.java
 ```
 
-**(3)get rank results**
+**(3)get ranking results**
 
 ```
 CoRank.java
