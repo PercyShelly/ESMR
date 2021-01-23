@@ -86,7 +86,7 @@ Similarity.java
 CoRank.java
 ```
 
-**(4)test and evaluation by RI and NDCG**
+**(4)testing and evaluation by RI and NDCG**
 
 ```
 MetricRI.java
