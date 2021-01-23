@@ -9,9 +9,9 @@ In this paper, we propose a novel model called ESMR, which adds the learned Embe
 
 ## Step 1：Dataset Preparation
 ---
-We used a total of two datasets, ACL Anthology Network (ANN) and Academic Social Network of AMiner Dataset.  And there are two versions of Aminer Dataset.
+We used a total of two datasets, ACL Anthology Network (AAN) and Academic Social Network of AMiner Dataset.  And there are two versions of Aminer Dataset.
 
-You can download the dataset from these place: https://clair.eecs.umich.edu/aan  (ANN)
+You can download the dataset from these place: https://clair.eecs.umich.edu/aan  (AAN)
 
 ​                                                                              https://www.aminer.cn/aminernetwork (Aminer-2014)
 
@@ -33,16 +33,17 @@ At this time, a graphical interface will pop up, and several pieces of data will
 
 **Raw data processing**
 
-Remove the citation relationship of papers published after 2015 (the number of citations in the future will only consider the articles to be ranked, that is, those published before 2015)
-
 Remove papers that have no references or are not cited by other articles
 
 Remove papers without a title or abstract
 
+In Aminer-2020, We removed the citation relationship of papers published after 2015. 
+In Aminer-2014 and AAN, we removed the citation relationship of papers published after 2009.
+
  ```python
  processdata.py
  ```
-You can get the weight between author and author,between paper and paper,and between author and paper.
+You can get the weight between authors and authors,between papers and papers,and between authors and papers.
 
 **Document processing**
 
@@ -50,7 +51,7 @@ You can get the weight between author and author,between paper and paper,and bet
 get_wordtopic.py
 ```
 
-You can get the weight between paper and word,between paper and topic, and between word and topic
+You can get the weight between papers and words,between papers and topics, and between words and topics
 
 **Classify processing**
 
@@ -62,7 +63,7 @@ find_FirstPub.py
 
 If you want to conduct comparative experiments in your own way, you can refer to it.
 
-## Step 3: train and test
+## Step 3: training and testing
 
 **(1)get embedding of all networks**
 
@@ -70,7 +71,7 @@ If you want to conduct comparative experiments in your own way, you can refer to
 PaperAuthorEmbedding.java
 ```
 
-You can directly set the embedded dimension
+You can directly set the dimension of embeddings
 
 **(2)calculate similarity**
 
@@ -84,7 +85,7 @@ Similarity.java
 CoRank.java
 ```
 
-**(4)testing and evaluation by RI and NDCG**
+**(4)test and evaluation by RI and NDCG**
 
 ```
 MetricRI.java
